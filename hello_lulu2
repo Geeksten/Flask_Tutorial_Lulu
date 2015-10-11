@@ -1,0 +1,28 @@
+from flask import Flask
+app_lulu = Flask(__name__)
+
+
+@app_lulu.route('/hello_lulu2')
+def hello_world_lulu():
+    """Running this code will start a server at: 127.0.0.1:5000/hello_sten2.
+    If you visit that address in a browser window, you should see a blank screen with text at the top left corner,
+    which says "Hello World! I am learning Flask."
+    Note that the @app_sten.route('/hello_sten2') is showing which code to run (in this case, hello_world_sten)
+    when the URL /hello_sten2 is requested. (A request is made when the URL is visited.)
+    When the URL is visited, the code is run, and a string is returned.
+    The string is the HTML code for the page. Since HTML does not parse white space, one long string will translate to
+    an HTML page easily.
+    """
+    # this is a comment, just like in Python
+    # note that the function name and the route argument
+    # do not need to be the same.
+    return "Hello World! I am learning Flask."
+    #return render_template("index_sten.html")
+
+if __name__ == '__main__':
+    app_lulu.run(debug=True)
+#running your app in Debug Mode.
+#if the server hits an error, it will give you a detailed message
+#instead of just "500 - Internal Server Error" or something similarly non-obvious.
+#However, it's important to note that debug mode is HIGHLY INSECURE,
+#and should absolutely never be used on production machines.
